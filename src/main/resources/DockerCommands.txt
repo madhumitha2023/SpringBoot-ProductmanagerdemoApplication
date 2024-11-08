@@ -1,0 +1,8 @@
+To run the container in Interactive detached mode and publishing it to
+port 3307 host to 3306 mysql port and at the end provide the image name and
+setting environment variables(-e).
+
+
+docker container run -idt --name mysql_java -p 3307:3306 -e MYSQL_USER=appuser -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_PASSWORD=appuser -e MYSQL_DATABASE=appdb mysql
+
+docker container run -idt --name mysql_demo -p 3307:3306 -e MYSQL_USER=demouser -e MYSQL_ROOT_PASSWORD=root123 -e MYSQL_PASSWORD=demouser -e MYSQL_DATABASE=demodb mysql
